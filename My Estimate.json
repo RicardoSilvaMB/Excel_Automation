@@ -1,0 +1,399 @@
+{
+	"Name": "My Estimate",
+	"Total Cost": {
+		"monthly": "602.14",
+		"upfront": "9245.61",
+		"12 months": "16471.29"
+	},
+	"Metadata": {
+		"Currency": "USD",
+		"Locale": "en_US",
+		"Created On": "5/19/2023",
+		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
+		"Share Url": "https://calculator.aws/#/estimate?id=8fb464ad01e5407441e523bf0f78f6c66b6a5ac1"
+	},
+	"Support": {
+		"Plan Name": "Business support plan",
+		"Region": "All",
+		"Summary": "Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour.",
+		"Service Cost": {
+			"monthly": "100.00",
+			"upfront": "795.25",
+			"12 months": "1995.25"
+		}
+	},
+	"Groups": {
+		"DEV": {
+			"Services": [
+				{
+					"Service Name": "Amazon EKS",
+					"Description": "EKS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "73.00",
+						"upfront": "0.00",
+						"12 months": "876.00"
+					},
+					"Properties": {
+						"Number of EKS Clusters": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon MQ",
+					"Description": "MQ",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "42.64",
+						"upfront": "0.00",
+						"12 months": "511.68"
+					},
+					"Properties": {
+						"Broker type": "Single-instance Broker",
+						"DT Inbound: All other regions": "500 GB per month",
+						"DT Outbound: All other regions": "500 GB per month",
+						"DT Intra-Region:": "0 TB per month",
+						"Amazon RabbitMQ Broker Instance": "mq.t3.micro",
+						"Storage per Broker": "100 GB",
+						"Number of Brokers running": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon Aurora PostgreSQL-Compatible DB",
+					"Description": "Aurora PostgreSQL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "9.75",
+						"upfront": "922.00",
+						"12 months": "1039.00"
+					},
+					"Properties": {
+						"Quantity": "1",
+						"Instance type": "db.t4g.medium",
+						"Utilization": "100 %Utilized/Month",
+						"Pricing strategy": "Reserved 3yr All Upfront",
+						"Storage amount": "70 GB",
+						"Additional backup storage": "70 GB"
+					}
+				},
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "35.52",
+						"upfront": "0.00",
+						"12 months": "426.24"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "REDIS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.76",
+						"upfront": "91.98",
+						"12 months": "113.10"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t4g.micro",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "EKS NODES (2)",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.41",
+						"upfront": "1802.81",
+						"12 months": "1819.73"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 2",
+						"Advance EC2 instance": "t3.large",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "8 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon Elastic File System (EFS)",
+					"Description": "EFS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "3.30",
+						"upfront": "0.00",
+						"12 months": "39.60"
+					},
+					"Properties": {
+						"Desired Storage Capacity": "10 GB per month"
+					}
+				}
+			]
+		},
+		"QUA": {
+			"Services": [
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "35.52",
+						"upfront": "0.00",
+						"12 months": "426.24"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon Aurora PostgreSQL-Compatible DB",
+					"Description": "Aurora PostgreSQL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "9.75",
+						"upfront": "922.00",
+						"12 months": "1039.00"
+					},
+					"Properties": {
+						"Quantity": "1",
+						"Instance type": "db.t4g.medium",
+						"Utilization": "100 %Utilized/Month",
+						"Pricing strategy": "Reserved 3yr All Upfront",
+						"Storage amount": "70 GB",
+						"Additional backup storage": "70 GB"
+					}
+				},
+				{
+					"Service Name": "Amazon MQ",
+					"Description": "MQ",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "42.64",
+						"upfront": "0.00",
+						"12 months": "511.68"
+					},
+					"Properties": {
+						"Broker type": "Single-instance Broker",
+						"DT Inbound: All other regions": "500 GB per month",
+						"DT Outbound: All other regions": "500 GB per month",
+						"DT Intra-Region:": "0 TB per month",
+						"Amazon RabbitMQ Broker Instance": "mq.t3.micro",
+						"Storage per Broker": "100 GB",
+						"Number of Brokers running": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EKS",
+					"Description": "EKS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "73.00",
+						"upfront": "0.00",
+						"12 months": "876.00"
+					},
+					"Properties": {
+						"Number of EKS Clusters": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "REDIS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.76",
+						"upfront": "91.98",
+						"12 months": "113.10"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t4g.micro",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon Elastic File System (EFS)",
+					"Description": "EFS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "3.30",
+						"upfront": "0.00",
+						"12 months": "39.60"
+					},
+					"Properties": {
+						"Desired Storage Capacity": "10 GB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "EKS NODES (2)",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.41",
+						"upfront": "1802.81",
+						"12 months": "1819.73"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 2",
+						"Advance EC2 instance": "t3.large",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "8 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				}
+			]
+		},
+		"PRE-PROD": {
+			"Services": [
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "35.52",
+						"upfront": "0.00",
+						"12 months": "426.24"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon Aurora PostgreSQL-Compatible DB",
+					"Description": "Aurora PostgreSQL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "9.75",
+						"upfront": "922.00",
+						"12 months": "1039.00"
+					},
+					"Properties": {
+						"Quantity": "1",
+						"Instance type": "db.t4g.medium",
+						"Utilization": "100 %Utilized/Month",
+						"Pricing strategy": "Reserved 3yr All Upfront",
+						"Storage amount": "70 GB",
+						"Additional backup storage": "70 GB"
+					}
+				},
+				{
+					"Service Name": "Amazon MQ",
+					"Description": "MQ",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "42.64",
+						"upfront": "0.00",
+						"12 months": "511.68"
+					},
+					"Properties": {
+						"Broker type": "Single-instance Broker",
+						"DT Inbound: All other regions": "500 GB per month",
+						"DT Outbound: All other regions": "500 GB per month",
+						"DT Intra-Region:": "0 TB per month",
+						"Amazon RabbitMQ Broker Instance": "mq.t3.micro",
+						"Storage per Broker": "100 GB",
+						"Number of Brokers running": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EKS",
+					"Description": "EKS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "73.00",
+						"upfront": "0.00",
+						"12 months": "876.00"
+					},
+					"Properties": {
+						"Number of EKS Clusters": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "REDIS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.76",
+						"upfront": "91.98",
+						"12 months": "113.10"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t4g.micro",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "EKS NODES (2)",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1.41",
+						"upfront": "1802.81",
+						"12 months": "1819.73"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Linux",
+						"Workload": "Consistent, Number of instances: 2",
+						"Advance EC2 instance": "t3.large",
+						"Pricing strategy": "Amazon EC2 Instance Savings Plans 3yr All Upfront",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "8 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon Elastic File System (EFS)",
+					"Description": "EFS",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "3.30",
+						"upfront": "0.00",
+						"12 months": "39.60"
+					},
+					"Properties": {
+						"Desired Storage Capacity": "10 GB per month"
+					}
+				}
+			]
+		}
+	}
+}
