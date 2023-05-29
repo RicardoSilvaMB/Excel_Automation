@@ -36,28 +36,26 @@ def getSupport ():
 def getRemainPricing ():
     cnt = 0
     for x in data ['Groups']:
-        pricing_groups.append(x)
         for y in data ['Groups'][x]:
             # print (y)
             # print(len(y) ,'\n')
+            str_merge = []
             for a in data ['Groups'][x][y]:
-                if a['Service Name']:
-                    print(a['Service Name'])
-                #print (a)
-                #print(len(a) ,'\n')
-                str_to_merge = ""
-                #print(a['Service Name'])
+                pricing_groups.append(x)
+                #print(len(pricing_groups))
+                #if a['Service Name']:
+                    #str_merge.append(a['Service Name'])
                 service_name.append(a['Service Name'])
                 description.append(a['Description'])
                 region.append(a['Region'])
                 monthly.append(a['Service Cost']['monthly'])
                 upfront.append(a['Service Cost']['upfront']) 
                 first_year.append(a['Service Cost']['12 months'])
+                configuration_summary.append(a['Properties'])
+                #for i in data ['Groups'][x][y]:
+                    	
 
-                for i in data ['Groups'][x][y]:
-                    str_to_merge = i['Properties']
-                configuration_summary.append(str_to_merge)
-                
+    #service_name.append(str_merge)            
 def listsToDict ():
     # for x in range(1, len(service_name)):
     #     return "teste"
@@ -91,7 +89,7 @@ getRemainPricing ()
 
 listsToDict()
 
-#print (remainPricing)
+print (remainPricing)
 
 pd.DataFrame.from_dict(remainPricing)
 #print(len(data['Metadata']))#utiliza isto no for das descriptions
