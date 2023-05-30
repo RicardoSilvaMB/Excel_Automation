@@ -55,18 +55,17 @@ def getRemainPricing ():
                 upfront.append(a['Service Cost']['upfront']) 
                 first_year.append(a['Service Cost']['12 months'])
                 configuration_summary.append(a['Properties'])
-    
-    if data['Support']:
-        pricing_groups.append('All')
-        service_name.append(data['Support']['Plan Name'])
-        description.append(data['Support']['Support Description'])
-        region.append(data['Support']['Region'])
-        monthly.append(data['Support']['Service Cost']['monthly'])
-        upfront.append(data['Support']['Service Cost']['upfront'])
-        first_year.append(data['Support']['Service Cost']['12 months'])
-        configuration_summary.append(data['Support']['Summary'])
-        
-    else:
+    try:
+        if data['Support']:
+            pricing_groups.append('All')
+            service_name.append(data['Support']['Plan Name'])
+            description.append(data['Support']['Support Description'])
+            region.append(data['Support']['Region'])
+            monthly.append(data['Support']['Service Cost']['monthly'])
+            upfront.append(data['Support']['Service Cost']['upfront'])
+            first_year.append(data['Support']['Service Cost']['12 months'])
+            configuration_summary.append(data['Support']['Summary'])
+    except:
         print("No AWS support detected!")
     
 def listsToDict ():    
