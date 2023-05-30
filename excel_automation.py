@@ -173,7 +173,7 @@ def tableFormating ():
             #Pricing Model and calculator link
             #worksheet.set_column("B:D", None)
             worksheet.merge_range("B2:E2", str(data["Name"]), merge_format)
-            worksheet.merge_range("B3:E3", str(data["Metadata"]["Share Url"]) + "/", merge_format2)
+            worksheet.merge_range("B3:E3", str(data["Metadata"]["Share Url"]), merge_format2)
             #worksheet.write_url("B3", )
             worksheet.conditional_format("B2:E3", {'type': 'blanks',
                                             'format' : border_format})
