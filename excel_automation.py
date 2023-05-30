@@ -74,8 +74,8 @@ def listsToDict ():
     remainPricing ['Service']  = service_name
     remainPricing ['Description'] = description
     remainPricing ['Region'] = region
-    remainPricing ['Monthly'] = monthly
     remainPricing ['Upfront'] = upfront
+    remainPricing ['Monthly'] = monthly
     remainPricing ['First 12 months total'] = first_year
     remainPricing ['Configuration summary'] = configuration_summary
 
