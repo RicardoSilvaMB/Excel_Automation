@@ -1,0 +1,519 @@
+{
+	"Name": "My Estimate",
+	"Total Cost": {
+		"monthly": "8509.29",
+		"upfront": "0.00",
+		"12 months": "102111.47"
+	},
+	"Metadata": {
+		"Currency": "USD",
+		"Locale": "en_US",
+		"Created On": "5/30/2023",
+		"Legal Disclaimer": "AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",
+		"Share Url": "https://calculator.aws/#/estimate?id=3b4af758d2ba928320a486e8f3da974596e93d41"
+	},
+	"Support": {
+		"Plan Name": "Business support plan",
+		"Region": "All",
+		"Support Description": "AWS Support",
+		"Summary": "Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour.",
+		"Service Cost": {
+			"monthly": "773.57",
+			"upfront": "0.00",
+			"12 months": "9282.84"
+		}
+	},
+	"Groups": {
+		"DEV": {
+			"Services": [
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "35.52",
+						"upfront": "0.00",
+						"12 months": "426.24"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "1"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "ETL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "196.80",
+						"upfront": "0.00",
+						"12 months": "2361.65"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "272 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "JBOSS_MASTER",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "181.24",
+						"upfront": "0.00",
+						"12 months": "2174.83"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Red Hat Enterprise Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "208 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB REPORTING",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "180.96",
+						"upfront": "0.00",
+						"12 months": "2171.57"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "92 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB_1",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "192.22",
+						"upfront": "0.00",
+						"12 months": "2306.69"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "220 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				}
+			]
+		},
+		"QUA": {
+			"Services": [
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "71.04",
+						"upfront": "0.00",
+						"12 months": "852.48"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "2"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB_2",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1117.21",
+						"upfront": "0.00",
+						"12 months": "13406.49"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "c6a.4xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "1143 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB_1",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1117.21",
+						"upfront": "0.00",
+						"12 months": "13406.49"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "c6a.4xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "1143 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB REPORTING",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "375.12",
+						"upfront": "0.00",
+						"12 months": "4501.42"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.2xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "334 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "JBOSS MASTER",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "172.44",
+						"upfront": "0.00",
+						"12 months": "2069.23"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Red Hat Enterprise Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "108 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "JBOSS SLAVE",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "181.24",
+						"upfront": "0.00",
+						"12 months": "2174.83"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Red Hat Enterprise Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "208 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "ETL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "196.80",
+						"upfront": "0.00",
+						"12 months": "2361.65"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "272 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "RDGW_AZ_2",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "44.98",
+						"upfront": "0.00",
+						"12 months": "539.71"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.medium",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "RDGW_AZ_1",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "44.98",
+						"upfront": "0.00",
+						"12 months": "539.71"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.medium",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				}
+			]
+		},
+		"PROD": {
+			"Services": [
+				{
+					"Service Name": "Network Address Translation (NAT) Gateway",
+					"Description": "NGW",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "71.04",
+						"upfront": "0.00",
+						"12 months": "852.48"
+					},
+					"Properties": {
+						"Number of NAT Gateways": "2"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "ETL",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "196.80",
+						"upfront": "0.00",
+						"12 months": "2361.65"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "272 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "JBOSS SLAVE",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "191.28",
+						"upfront": "0.00",
+						"12 months": "2295.31"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Red Hat Enterprise Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "322 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "JBOSS MASTER",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "173.68",
+						"upfront": "0.00",
+						"12 months": "2084.11"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Red Hat Enterprise Linux",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "122 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB REPORTING",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "375.47",
+						"upfront": "0.00",
+						"12 months": "4505.62"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.2xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "338 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB_1",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1264.44",
+						"upfront": "0.00",
+						"12 months": "15173.25"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "c6a.4xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "2816 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "DB_2",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "1265.32",
+						"upfront": "0.00",
+						"12 months": "15183.81"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "c6a.4xlarge",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "2826 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "RDGW_AZ_2",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "44.98",
+						"upfront": "0.00",
+						"12 months": "539.71"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.medium",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				},
+				{
+					"Service Name": "Amazon EC2 ",
+					"Description": "RDGW_AZ_1",
+					"Region": "Europe (Ireland)",
+					"Service Cost": {
+						"monthly": "44.98",
+						"upfront": "0.00",
+						"12 months": "539.71"
+					},
+					"Properties": {
+						"Tenancy": "Shared Instances",
+						"Operating system": "Windows Server",
+						"Workload": "Consistent, Number of instances: 1",
+						"Advance EC2 instance": "t3a.medium",
+						"Pricing strategy": "On-Demand Utilization: 100 %Utilized/Month",
+						"Enable monitoring": "disabled",
+						"EBS Storage amount": "20 GB",
+						"DT Inbound: Not selected": "0 TB per month",
+						"DT Outbound: Not selected": "0 TB per month",
+						"DT Intra-Region:": "0 TB per month"
+					}
+				}
+			]
+		}
+	}
+}

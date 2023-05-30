@@ -12,11 +12,9 @@ monthly = []
 upfront = []
 first_year = []
 configuration_summary = []
-
-#print (data['Name'])
 pricingUMY = {}
-support = {}
 remainPricing = {}
+
 #It gets the Upfront, Monthly and 12 months pricing values 
 def getPricingUMY ():
 
@@ -32,16 +30,7 @@ def headerCleanUp (trim):
     trim = trim.replace('{', "")
     trim = trim.replace('}', "")
     return trim
-
-#Here you have to add any procedure to check if support exists
-def getSupport ():
-
-    support ['Service Name'] = data['Support']['Plan Name']
-    support ['Region'] = data['Support']['Region']
-    support ['Configuration Summary'] = data['Support']['Summary']
-    for x in data['Support']['Service Cost']:
-        pricingUMY[x] = data['Support']['Service Cost'][x]
-
+    
 def cleanUp2 (trim) :
     for x in range(0, len(trim)):
         merge = str(trim[x])
@@ -66,7 +55,20 @@ def getRemainPricing ():
                 upfront.append(a['Service Cost']['upfront']) 
                 first_year.append(a['Service Cost']['12 months'])
                 configuration_summary.append(a['Properties'])
-
+    
+    if data['Support']:
+        pricing_groups.append('All')
+        service_name.append(data['Support']['Plan Name'])
+        description.append(data['Support']['Support Description'])
+        region.append(data['Support']['Region'])
+        monthly.append(data['Support']['Service Cost']['monthly'])
+        upfront.append(data['Support']['Service Cost']['upfront'])
+        first_year.append(data['Support']['Service Cost']['12 months'])
+        configuration_summary.append(data['Support']['Summary'])
+        
+    else:
+        print("No AWS support detected!")
+    
 def listsToDict ():    
     remainPricing ['Group hierarchy'] = pricing_groups
     remainPricing ['Service']  = service_name
@@ -77,6 +79,7 @@ def listsToDict ():
     remainPricing ['First 12 months total'] = first_year
     remainPricing ['Configuration summary'] = configuration_summary
 
+    
     cleanUp2(pricing_groups)
     cleanUp2(service_name)
     cleanUp2(description)
@@ -88,7 +91,7 @@ def listsToDict ():
 
 def tableFormating ():
     with pd.ExcelWriter('./output/My Estimate - Phase 1.xlsx', engine='xlsxwriter') as writer:
-            dfA.to_excel(writer, sheet_name='Sheet1', index=False, startrow=0, startcol=0)
+            dfA.to_excel(writer, sheet_name='Sheet1', index=False, startrow=5, startcol=1)
             column_settings = [{'header': headerCleanUp(column)} for column in dfA.columns] 
             (max_row, max_col) = dfA.shape
             workbook = writer.book
@@ -98,32 +101,44 @@ def tableFormating ():
                                 'align':'left',
                                 'font_size':10
                             })
+            merge_format = workbook.add_format({
+                                "bold": 1,
+                                "border": 1,
+                                "align": "center",
+                                "valign": "vcenter",
+                                "fg_color": "orange",
+                            })
+            merge_format2 = workbook.add_format({
+                                "border": 1,
+                                "align": "center",
+                                "valign": "vcenter"
+                            })
 
             bold_format = workbook.add_format({'bold': True})
 
             
             worksheet = writer.sheets['Sheet1']
             
-            upfrontLetter = 'E'
-            MonthlyLetter = 'F'
+            upfrontLetter = 'F'
+            MonthlyLetter = 'G'
             
             sumUpfront = dfA['Upfront'].sum()
             sumMonthly = dfA['Monthly'].sum()
             sumFirstMonth = sumUpfront + sumMonthly
             sum12Months = dfA['First 12 months total'].sum()
             
-            worksheet.add_table(0, 0, max_row, max_col-1, {'columns': column_settings})
+            worksheet.add_table(5, 1, max_row+5, max_col, {'columns': column_settings})
             
-            totalUpfrontStr = upfrontLetter + str(max_row+3)
-            totalUpfrontCalc = MonthlyLetter + str(max_row+3)
-            firstMonthStr = upfrontLetter + str(max_row+4)
-            firstMonthCalc = MonthlyLetter + str(max_row+4)
-            MonthStr = upfrontLetter + str(max_row+5)
-            MonthCalc = MonthlyLetter + str(max_row+5)
-            firstYearStr = upfrontLetter + str(max_row+6)
-            firstYearCalc = MonthlyLetter + str(max_row+6)
-            total3YearsStr = upfrontLetter + str(max_row+7)
-            total3YearsCalc = MonthlyLetter + str(max_row+7)
+            totalUpfrontStr = upfrontLetter + str(max_row+8)
+            totalUpfrontCalc = MonthlyLetter + str(max_row+8)
+            firstMonthStr = upfrontLetter + str(max_row+9)
+            firstMonthCalc = MonthlyLetter + str(max_row+9)
+            MonthStr = upfrontLetter + str(max_row+10)
+            MonthCalc = MonthlyLetter + str(max_row+10)
+            firstYearStr = upfrontLetter + str(max_row+11)
+            firstYearCalc = MonthlyLetter + str(max_row+11)
+            total3YearsStr = upfrontLetter + str(max_row+12)
+            total3YearsCalc = MonthlyLetter + str(max_row+12)
             worksheet.write(totalUpfrontStr, "Total Upfront", None)
             worksheet.write(totalUpfrontCalc, sumUpfront, money_format)
             worksheet.write(firstMonthStr, "Total First Month", None)
@@ -138,7 +153,7 @@ def tableFormating ():
             #worksheet.write("A1", "Group hierarchy")
             #worksheet.write("H1", "Configuration summary")
 
-            moneyStrMerge =  "E2"+":"+"G"+str(max_row+1)
+            moneyStrMerge =  "F6"+":"+"H"+str(max_row+6)
             worksheet.conditional_format(moneyStrMerge, {'type': 'cell',
                                             'criteria' : '>', 
                                             'value' : -99999999999,
@@ -149,19 +164,27 @@ def tableFormating ():
                                             'format' : border_format})
                                             
             #VAIS TER QUE ALTERAR O A1 PARA UMA COISA MAIS AUTOMÁTICA
-            geralBorderStrMerge = "A1"+":"+"H"+str(max_row+1)
+            geralBorderStrMerge = "B6"+":"+"I"+str(max_row+6)
             worksheet.conditional_format(geralBorderStrMerge, {'type': 'no_blanks',
                                             'format' : border_format})
             boldStrMerge = totalUpfrontStr+":"+total3YearsStr
             worksheet.conditional_format(boldStrMerge, {'type': 'no_blanks',
                                             'format' : bold_format})
-
+            
+            #Pricing Model and calculator link
+            #worksheet.set_column("B:D", None)
+            worksheet.merge_range("B2:E2", str(data["Name"]), merge_format)
+            worksheet.merge_range("B3:E3", str(data["Metadata"]["Share Url"]) + "/", merge_format2)
+            #worksheet.write_url("B3", )
+            worksheet.conditional_format("B2:E3", {'type': 'blanks',
+                                            'format' : border_format})
             worksheet.autofit()
     
 getPricingUMY ()
-getSupport ()
 getRemainPricing ()
+# getSupport ()
 listsToDict()
+
 
 dfA = pd.DataFrame.from_dict(remainPricing)
 dfA.fillna(' ',inplace=True)
@@ -170,6 +193,7 @@ dfA ['Monthly'] = dfA ['Monthly'].astype('float')
 dfA ['First 12 months total'] = dfA ['First 12 months total'].astype('float')
 tableFormating ()
 
+print("All done. Enjoy :)")
 #print(len(data['Metadata']))#utiliza isto no for das descriptions
 
 
