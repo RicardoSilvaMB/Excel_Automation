@@ -43,19 +43,25 @@ def cleanUp2 (trim) :
         merge = merge.replace('}', "")
         trim[x] = merge
 
+def groupInfo (x,a):
+    pricing_groups.append(x)
+    service_name.append(a['Service Name'])
+    description.append(a['Description'])
+    region.append(a['Region'])
+    monthly.append(a['Service Cost']['monthly'])
+    upfront.append(a['Service Cost']['upfront']) 
+    first_year.append(a['Service Cost']['12 months'])
+    configuration_summary.append(a['Properties'])
+
 def getRemainPricing ():
     for x in data ['Groups']:
         for y in data ['Groups'][x]:
-            for a in data ['Groups'][x][y]:
-                pricing_groups.append(x)
-                service_name.append(a['Service Name'])
-                description.append(a['Description'])
-                region.append(a['Region'])
-                monthly.append(a['Service Cost']['monthly'])
-                upfront.append(a['Service Cost']['upfront']) 
-                first_year.append(a['Service Cost']['12 months'])
-                configuration_summary.append(a['Properties'])
-    try:
+            if x == 'Services':
+                    groupInfo(data["Name"],y)
+            else:
+                for a in data ['Groups'][x][y]:
+                    groupInfo(x,a)
+    try:    
         if data['Support']:
             pricing_groups.append('All')
             service_name.append(data['Support']['Plan Name'])
