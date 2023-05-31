@@ -90,7 +90,7 @@ def listsToDict ():
 
 def tableFormating ():
     with pd.ExcelWriter('./output/My Estimate - Phase 1.xlsx', engine='xlsxwriter') as writer:
-            dfA.to_excel(writer, sheet_name='Sheet1', index=False, startrow=5, startcol=1)
+            dfA.to_excel(writer, sheet_name='AWS Pricing', index=False, startrow=5, startcol=1)
             column_settings = [{'header': headerCleanUp(column)} for column in dfA.columns] 
             (max_row, max_col) = dfA.shape
             workbook = writer.book
@@ -116,7 +116,7 @@ def tableFormating ():
             bold_format = workbook.add_format({'bold': True})
 
             
-            worksheet = writer.sheets['Sheet1']
+            worksheet = writer.sheets['AWS Pricing']
             
             upfrontLetter = 'F'
             MonthlyLetter = 'G'
