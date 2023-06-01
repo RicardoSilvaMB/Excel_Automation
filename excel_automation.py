@@ -2,7 +2,22 @@ import pandas as pd
 import json
 import os
 
-f = open('./queue/My Estimate.json')
+directory_json = str(input("Where is located your json? Dont forget to add *filename*.json in the directory? \n"))
+directoryFormatedPricing = str (input('Where do you want to save the new Excel file? \n')) 
+nameFormatedPricingFile = str(input('Give me the project name. \n'))
+#nameFormatedPricingFile =  
+# if nameFormatedPricingFile[-1] != '/' or nameFormatedPricingFile[-1] != '/':
+#     if directoryFormatedPricing.find('/') != -1:
+#         nameFormatedPricingFile += '/'
+
+
+
+# ./queue/My Estimate.json
+# ./output/
+#DebtManager
+
+f = open(directory_json)
+
 data = json.load (f)
 pricing_groups = []
 service_name = []
@@ -94,8 +109,8 @@ def listsToDict ():
     cleanUp2(first_year)
     cleanUp2(configuration_summary)
 
-def tableFormating ():
-    with pd.ExcelWriter('./output/My Estimate - Phase 1.xlsx', engine='xlsxwriter') as writer:
+def tableFormating (): #directoryFormatedPricing + data["Name"] + '_AWS_Pricing.xlsx'
+    with pd.ExcelWriter(directoryFormatedPricing + nameFormatedPricingFile + '_Pricing_AWS.xlsx' , engine='xlsxwriter') as writer:
             dfA.to_excel(writer, sheet_name='AWS Pricing', index=False, startrow=5, startcol=1)
             column_settings = [{'header': headerCleanUp(column)} for column in dfA.columns] 
             (max_row, max_col) = dfA.shape
