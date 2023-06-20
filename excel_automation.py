@@ -65,7 +65,7 @@ def groupInfo (x,a):
     region.append(a['Region'])
     monthly.append(a['Service Cost']['monthly'])
     upfront.append(a['Service Cost']['upfront']) 
-    first_year.append(a['Service Cost']['12 months'])
+    first_year.append(a['Service Cost']['undefined month'])
     configuration_summary.append(a['Properties'])
 
 def getRemainPricing ():
@@ -84,7 +84,7 @@ def getRemainPricing ():
             region.append(data['Support']['Region'])
             monthly.append(data['Support']['Service Cost']['monthly'])
             upfront.append(data['Support']['Service Cost']['upfront'])
-            first_year.append(data['Support']['Service Cost']['12 months'])
+            first_year.append(data['Support']['Service Cost']['undefined month'])
             configuration_summary.append(data['Support']['Summary'])
     except:
         print("No AWS support detected!")
