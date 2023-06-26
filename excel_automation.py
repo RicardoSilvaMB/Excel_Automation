@@ -61,11 +61,18 @@ def cleanUp2 (trim) :
 def groupInfo (x,a):
     pricing_groups.append(x)
     service_name.append(a['Service Name'])
-    description.append(a['Description'])
+    try:
+        description.append(a['Description'])
+    except:
+        description.append(a['Properties'])
     region.append(a['Region'])
     monthly.append(a['Service Cost']['monthly'])
-    upfront.append(a['Service Cost']['upfront']) 
-    first_year.append(a['Service Cost']['undefined month'])
+    upfront.append(a['Service Cost']['upfront'])
+    try:
+        first_year.append(a['Service Cost']['12 Months Total'])
+    except:
+        first_year.append(a['Service Cost']['undefined month'])
+    
     configuration_summary.append(a['Properties'])
 
 def getRemainPricing ():
@@ -84,7 +91,10 @@ def getRemainPricing ():
             region.append(data['Support']['Region'])
             monthly.append(data['Support']['Service Cost']['monthly'])
             upfront.append(data['Support']['Service Cost']['upfront'])
-            first_year.append(data['Support']['Service Cost']['undefined month'])
+            try:
+                first_year.append(a['Service Cost']['12 Months Total'])
+            except:
+                first_year.append(a['Service Cost']['undefined month'])
             configuration_summary.append(data['Support']['Summary'])
     except:
         print("No AWS support detected!")
