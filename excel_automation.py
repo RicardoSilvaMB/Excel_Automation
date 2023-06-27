@@ -70,10 +70,10 @@ def groupInfo (x,a):
     upfront.append(a['Service Cost']['upfront'])
     try:
         first_year.append(a['Service Cost']['12 Months Total'])
-        print(a['Service Cost']['12 Months Total'])
+
     except:
         first_year.append(a['Service Cost']['undefined month'])
-        print(a['Service Cost']['undefined month'])
+        
     
     configuration_summary.append(a['Properties'])
 
