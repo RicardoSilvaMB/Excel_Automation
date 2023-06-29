@@ -69,7 +69,7 @@ def groupInfo (x,a):
     monthly.append(a['Service Cost']['monthly'])
     upfront.append(a['Service Cost']['upfront'])
     try:
-        first_year.append(a['Service Cost']['12 Months Total'])
+        first_year.append(a['Service Cost']['12 months'])
 
     except:
         first_year.append(a['Service Cost']['undefined month'])
@@ -94,7 +94,7 @@ def getRemainPricing ():
             monthly.append(data['Support']['Service Cost']['monthly'])
             upfront.append(data['Support']['Service Cost']['upfront'])
             try:
-                first_year.append(data['Support']['Service Cost']['12 Months Total'])
+                first_year.append(data['Support']['Service Cost']['12 months'])
             except:
                 first_year.append(data['Support']['Service Cost']['undefined month'])
             configuration_summary.append(data['Support']['Summary'])
