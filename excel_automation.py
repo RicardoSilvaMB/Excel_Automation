@@ -89,7 +89,10 @@ def getRemainPricing ():
         if data['Support']:
             pricing_groups.append('All')
             service_name.append(data['Support']['Plan Name'])
-            description.append(data['Support']['Support Description'])
+            try:
+                description.append(data['Support']['Support Description'])
+            except:
+                description.append("Support")
             region.append(data['Support']['Region'])
             monthly.append(data['Support']['Service Cost']['monthly'])
             upfront.append(data['Support']['Service Cost']['upfront'])
