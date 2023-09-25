@@ -1,10 +1,26 @@
 import pandas as pd
 import json
 import os
+import argparse
 
-directory_json = str(input("Where is located your json? Dont forget to add *filename*.json in the directory? \n"))
-directoryFormatedPricing = str (input('Where do you want to save the new Excel file? \n')) 
-nameFormatedPricingFile = str(input('Give me the project name. \n'))
+# Initialize the argparse object
+parser = argparse.ArgumentParser(description='Process directories and filenames.')
+
+# Add the arguments
+parser.add_argument('--json-dir', type=str, required=True, 
+                    help='Location of the JSON. Must include filename.json.')
+parser.add_argument('--output-dir', type=str, required=True, 
+                    help='Location where the new Excel file should be saved.')
+parser.add_argument('--project-name', type=str, required=True, 
+                    help='Name of the project.')
+
+# Parse the arguments
+args = parser.parse_args()
+
+# Assign values from arguments
+directory_json = args.json_dir
+directoryFormatedPricing = args.output_dir
+nameFormatedPricingFile = args.project_name
 #nameFormatedPricingFile =  
 # if nameFormatedPricingFile[-1] != '/' or nameFormatedPricingFile[-1] != '/':
 #     if directoryFormatedPricing.find('/') != -1:

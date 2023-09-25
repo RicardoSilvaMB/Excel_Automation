@@ -1,17 +1,35 @@
+
+# AWS Calculator Excel Automation
+
 This script enables you to optimize your time when you finish your pricing in AWS Calculator.
 
-1. Before anything, this script was written in Python, so you must have Python installed on your PC. Just google it and install following an installation guide. 
+### Pre-requisites
 
-2. Open your Linux Terminal and run the command below. You need to install all the necessary packages to run the script.
+1. **Python**: Before anything, this script was written in Python. Ensure you have Python installed on your PC. If not, just google "install Python" and follow an installation guide.
 
+### Installation
+
+2. **Packages Installation**: Open your terminal and navigate to the directory containing the script. Then, run the following command to install all necessary packages:
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the command below, inside the main directory: 
+### Usage
 
-python excel_automation.py
+3. **Script Execution**: Run the command below from the main directory. Replace the placeholders `<path_to_json>`, `<output_directory>`, and `<project_name>` with your values:
 
-4. Now it will ask where is located the JSON file. It´s very important, when you give the directory, also specify the *FILE NAME*.json
+```bash
+python3 excel_automation.py --json-dir <path_to_json> --output-dir <output_directory> --project-name <project_name>
+```
 
-5. Next you have to give the directory where do you want save the excel file. Just give the directory.
+**Example**:
 
-6. Finally give the project name, it will be used to name the excel file that the script generate.
+```bash
+python3 excel_automation.py --json-dir ~/Downloads/My\ Estimate\ \(1\).json --output-dir ./ --project-name test
+```
+
+Note:
+- For `--json-dir`, specify both the directory and the *FILENAME*.json.
+- For `--output-dir`, specify the directory where you want to save the generated Excel file.
+- For `--project-name`, provide the project name, which will be used to name the generated Excel file.
