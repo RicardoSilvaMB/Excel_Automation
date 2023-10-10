@@ -199,7 +199,7 @@ def tableFormating (): #directoryFormatedPricing + data["Name"] + '_AWS_Pricing.
             worksheet.write(firstYearStr, "Total First Year", None)
             worksheet.write(firstYearCalc, sum12Months, money_format)
             worksheet.write(total3YearsStr, "Total 3 Years", None)
-            worksheet.write(total3YearsCalc, (sum12Months+(sumFirstMonth*24)), money_format) #FAZ ESTA CONTA
+            worksheet.write(total3YearsCalc, (sum12Months+(sumMonthly*24)), money_format) #FAZ ESTA CONTA
 
             #worksheet.write("A1", "Group hierarchy")
             #worksheet.write("H1", "Configuration summary")
