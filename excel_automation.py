@@ -191,15 +191,15 @@ def tableFormating (): #directoryFormatedPricing + data["Name"] + '_AWS_Pricing.
             total3YearsStr = upfrontLetter + str(max_row+12)
             total3YearsCalc = MonthlyLetter + str(max_row+12)
             worksheet.write(totalUpfrontStr, "Total Upfront", None)
-            worksheet.write(totalUpfrontCalc, sumUpfront, money_format)
+            worksheet.write(totalUpfrontCalc, "=SUM(Table1[Upfront])", money_format)
             worksheet.write(firstMonthStr, "Total First Month", None)
-            worksheet.write(firstMonthCalc, sumFirstMonth, money_format)
+            worksheet.write(firstMonthCalc, "=SUM(Table1[Monthly])+" + totalUpfrontCalc , money_format)
             worksheet.write(MonthStr, "Total Monthly", None)
-            worksheet.write(MonthCalc, sumMonthly, money_format)
+            worksheet.write(MonthCalc, "=SUM(Table1[Monthly])", money_format)
             worksheet.write(firstYearStr, "Total First Year", None)
-            worksheet.write(firstYearCalc, sum12Months, money_format)
+            worksheet.write(firstYearCalc, "=" + MonthCalc + "*12+" + totalUpfrontCalc, money_format)
             worksheet.write(total3YearsStr, "Total 3 Years", None)
-            worksheet.write(total3YearsCalc, (sum12Months+(sumMonthly*24)), money_format) #FAZ ESTA CONTA
+            worksheet.write(total3YearsCalc, "=" + firstYearCalc + "+(" + MonthCalc + "*24)", money_format) #FAZ ESTA CONTA
 
             #worksheet.write("A1", "Group hierarchy")
             #worksheet.write("H1", "Configuration summary")
